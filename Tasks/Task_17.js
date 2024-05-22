@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const Task_16 = () => {
+const Task_17 = () => {
   const [showName, setShowName] = useState(false);
 
 
   return (
     <View style={styles.container}>
       <Button
-        title="Show"
+        title={showName ? "Hide" : "Show"}
         onPress={() => {
           setShowName(!showName);
         }}
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Task_16;
+export default Task_17;
