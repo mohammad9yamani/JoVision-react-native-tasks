@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const FunctionPage = () => {
+const MyFunctionPage = () => {
   useEffect(() => {
-    console.log('FunctionPage loaded');
+    console.log('MyFunctionPage loaded');
 
     return () => {
-      console.log('FunctionPage unloaded');
+      console.log('MyFunctionPage unloaded');
     };
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>This is FunctionPage</Text>
+      <Text style={styles.text}>This is MyFunctionPage</Text>
     </View>
   );
 };
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FunctionPage;
+export default MyFunctionPage;

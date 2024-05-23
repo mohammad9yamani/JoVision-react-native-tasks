@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Button, StyleSheet } from 'react-native';
-import FunctionPage from './FunctionPage';
+import MyFunctionPage from './MyFunctionPage';
 
 const Task_21 = () => {
   const [showFunctionPage, setShowFunctionPage] = useState(false);
@@ -13,7 +13,7 @@ const Task_21 = () => {
       }} 
       />
 
-      {showFunctionPage && <FunctionPage />}
+      {showFunctionPage && <MyFunctionPage />}
     </View>
   );
 };

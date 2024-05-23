@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Button, StyleSheet } from 'react-native';
-import ClassPage from './ClassPage';
+import MyClassPage from './MyClassPage';
 
 const Task_19 = () => {
   const [showClassPage, setShowClassPage] = useState(false);
@@ -12,7 +12,7 @@ const Task_19 = () => {
         setShowClassPage(true);
       }} 
     />
-      {showClassPage && <ClassPage />}
+      {showClassPage && <MyClassPage />}
     </View>
   );
 };

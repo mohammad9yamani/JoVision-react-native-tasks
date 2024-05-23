@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-class ClassPage_2 extends Component {
+class MyClassPage_2 extends Component {
  
  
   componentDidMount() {
-    console.log('ClassPage_2 loaded');
+    console.log('MyClassPage_2 loaded');
   }
 
   componentWillUnmount() {
-    console.log('ClassPage_2 unloaded');
+    console.log('MyClassPage_2 unloaded');
   }
  
  
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>This is ClassPage_2</Text>
+        <Text style={styles.text}>This is MyClassPage_2</Text>
       </View>
     );
   }
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ClassPage_2;
+export default MyClassPage_2;
