@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     paddingHorizontal: 10,
-    width: '80%',
+    width: '100%',
     marginBottom: 20,
   },
 });
