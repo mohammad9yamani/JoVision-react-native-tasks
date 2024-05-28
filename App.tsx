@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 
-import Task_27 from './Tasks/Task_27';
+import Task_28 from './Tasks/Task_28';
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <StatusBar />
         <View>
           
-          <Task_27 />
+          <Task_28 />
         </View>
       </ScrollView>
     </SafeAreaView>
