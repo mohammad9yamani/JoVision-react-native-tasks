@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { View, FlatList, Image, Alert, Pressable, Button, TextInput, Modal, StyleSheet } from 'react-native';
 
 const Task_29 = () => {
-  // Array of image sources
+  
   const images = [
     require('./resources/image4.png'),
     require('./resources/image5.png'),
