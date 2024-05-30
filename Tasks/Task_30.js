@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     top: 5,
-    left: 15,
+    right: 15,
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
     borderRadius: 10,
     padding: 2,
