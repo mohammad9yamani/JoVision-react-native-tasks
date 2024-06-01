@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { View, FlatList, Image, Alert, Pressable, Button, TextInput, Modal, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const Task_29 = () => {
-
-  const images = [
+const Task_31 = () => {
+  
+  const initialImages = [
     require('./resources/image4.png'),
     require('./resources/image5.png'),
     require('./resources/image6.png'),
@@ -16,10 +17,40 @@ const Task_29 = () => {
     require('./resources/image13.png'),
   ];
 
+
+
   const flatListRef = useRef(null);
+  const [images, setImages] = useState(initialImages);
   const [modalVisible, setModalVisible] = useState(false);
   const [inputIndex, setInputIndex] = useState('');
 
+
+  const handleDuplicateImage = (index) => {
+    const newImages = [...images];
+    newImages.splice(index + 1, 0, images[index]);
+    setImages(newImages);
+  };
+
+  const handleRemoveImage = (indexToRemove) => {
+    Alert.alert(
+      'Remove Image',
+      'Are you sure you want to remove this image?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'OK',
+          onPress: () => {
+            const newImages = images.filter((_, index) => index !== indexToRemove);
+            setImages(newImages);
+          },
+
+        },
+      ]
+    );
+  };
 
   const handleImagePress = (index) => {
     Alert.alert(`You have selected image: ${index + 1}`);
@@ -41,9 +72,21 @@ const Task_29 = () => {
   };
 
   const renderItem = ({ item, index }) => (
+    <View style={styles.imageContainer}>
+
     <Pressable onPress={() => handleImagePress(index)}>
       <Image source={item} style={styles.image} />
     </Pressable>
+
+    <Pressable style={styles.ricon} onPress={() => handleRemoveImage(index)}>
+    <Icon name="delete" size={15} color="white" />
+    </Pressable>
+
+    <Pressable style={styles.aicon} onPress={() => handleDuplicateImage(index)}>
+    <Icon name="add" size={15} color="white" />
+    </Pressable>
+
+    </View>
   );
 
   return (
@@ -67,7 +110,7 @@ const Task_29 = () => {
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          setModalVisible(false);
+          setModalVisible(!modalVisible);
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
@@ -120,6 +163,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 22,
   },
+  imageContainer: {
+    position: 'relative',
+    marginHorizontal: 10,
+  },
+  removeIcon: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+  },
   buttonContainer: {
     marginBottom: 100,
   },
@@ -155,6 +207,22 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 5,
   },
+  ricon: {
+    position: 'absolute',
+    top: 5,
+    right: 15,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    borderRadius: 10,
+    padding: 2,
+  },
+  aicon: {
+    position: 'absolute',
+    top: 5,
+    left: 15,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    borderRadius: 10,
+    padding: 2,
+  },
 });
 
-export default Task_29;
+export default Task_31;
