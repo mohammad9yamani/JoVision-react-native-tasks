@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, Button, StyleSheet, Text, Alert } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text, Alert ,ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Task_35 = () => {
@@ -62,6 +62,8 @@ const Task_35 = () => {
         placeholder="Name"
         value={name}
         onChangeText={setName}
+        maxLength={20}
+
       />
       <TextInput
         style={styles.input}
@@ -69,12 +71,15 @@ const Task_35 = () => {
         value={age}
         onChangeText={setAge}
         keyboardType="numeric"
+        maxLength={20}
+
       />
       <TextInput
         style={styles.input}
         placeholder="Country"
         value={country}
         onChangeText={setCountry}
+        maxLength={20}
       />
       <Button title="Submit" onPress={handleSubmit} />
     </View>
@@ -83,12 +88,13 @@ const Task_35 = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    grow: 1,
     justifyContent: 'center',
     padding: 16,
   },
   input: {
     height: 40,
+    width: 100,
     borderColor: 'gray',
     borderWidth: 1,
     marginBottom: 12,
