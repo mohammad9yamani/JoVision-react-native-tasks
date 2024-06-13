@@ -1,8 +1,11 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import 'react-native-gesture-handler';
+import { enableScreens } from 'react-native-screens';
 
-import Task_39 from './Tasks/Task_39';
+import Task_41 from './Tasks/Task_41';
 
+enableScreens();
 
 const App = () => {
 
@@ -12,7 +15,7 @@ const App = () => {
         <StatusBar />
         <View style={styles.content}>
           
-          <Task_39 />
+          <Task_41 />
         </View>
 
     </SafeAreaView>
