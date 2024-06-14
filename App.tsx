@@ -1,23 +1,28 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import 'react-native-gesture-handler';
 import { enableScreens } from 'react-native-screens';
-
-import Task_41 from './Tasks/Task_41';
+import taskMapping from './taskMapping';
 
 enableScreens();
 
-const App = () => {
+const currentTask = 'Task_42'; // Update this value to switch between tasks
 
+const App = () => {
+  const CurrentTaskComponent = taskMapping[currentTask];
+
+  // Special case handling for Task_41 and Task_42
+  if (currentTask === 'Task_41' || currentTask === 'Task_42') {
+    return (
+      <CurrentTaskComponent />
+    );
+  }
+
+  // Default case for other tasks
   return (
     <SafeAreaView style={styles.container}>
-   
-        <StatusBar />
-        <View style={styles.content}>
-          
-          <Task_41 />
-        </View>
-
+      <StatusBar />
+      <CurrentTaskComponent />
     </SafeAreaView>
   );
 };
@@ -27,16 +32,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginHorizontal: 16,
-  },
-  scrollView: {
-    flexGrow: 1,
-    justifyContent: 'center', 
-    alignItems: 'center', 
-  },
-  content: {
-    flexGrow: 1,
-    justifyContent: 'center',  // Center vertically
-    alignItems: 'center',  // Center horizontally
   },
 });
 

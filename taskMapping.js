@@ -1,0 +1,32 @@
+const taskMapping = {
+    Task_16: require('./Tasks/Task_16').default,
+    Task_17: require('./Tasks/Task_17').default,
+    Task_18: require('./Tasks/Task_18').default,
+    Task_19: require('./Tasks/Task_19').default,
+    Task_20: require('./Tasks/Task_20').default,
+    Task_21: require('./Tasks/Task_21').default,
+    Task_22: require('./Tasks/Task_22').default,
+    Task_23: require('./Tasks/Task_23').default,
+    Task_24: require('./Tasks/Task_24').default,
+    Task_25: require('./Tasks/Task_25').default,
+    Task_26: require('./Tasks/Task_26').default,
+    Task_27: require('./Tasks/Task_27').default,
+    Task_28: require('./Tasks/Task_28').default,
+    Task_29: require('./Tasks/Task_29').default,
+    Task_30: require('./Tasks/Task_30').default,
+    Task_31: require('./Tasks/Task_31').default,
+    Task_32: require('./Tasks/Task_32').default,
+    Task_33: require('./Tasks/Task_33').default,
+    Task_34: require('./Tasks/Task_34').default,
+    Task_35: require('./Tasks/Task_35').default,
+    Task_36: require('./Tasks/Task_36').default,
+    Task_37: require('./Tasks/Task_37').default,
+    Task_38: require('./Tasks/Task_38').default,
+    Task_39: require('./Tasks/Task_39').default,
+    Task_40: require('./Tasks/Task_40').default,
+    Task_41: require('./Tasks/Task_41').default,
+    Task_42: require('./Tasks/Task_42').default,
+  };
+  
+  export default taskMapping;
+  
