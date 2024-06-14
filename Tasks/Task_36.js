@@ -17,7 +17,7 @@ const Task_36 = () => {
     const randomWords = Array.from({ length: 100 }, () => generateRandomWord(5));
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollView}>
       {randomWords.map((word, index) => (
         <Text key={index} style={styles.text}>
           {word}
@@ -31,6 +31,12 @@ const Task_36 = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+  },
+  scrollView: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
   },
   text: {
     fontSize: 18,

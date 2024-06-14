@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
 const ScreenOne = ({ navigation }) => (
-  <View style={styles.screen}>
+  <View style={styles.container}>
     <Text>Screen 1</Text>
     <Button title="Go to Screen 2" onPress={() => navigation.navigate('Screen2')} />
     <Button title="Go to Screen 3" onPress={() => navigation.navigate('Screen3')} />
@@ -15,7 +15,7 @@ const ScreenOne = ({ navigation }) => (
 );
 
 const ScreenTwo = ({ navigation }) => (
-  <View style={styles.screen}>
+  <View style={styles.container}>
     <Text>Screen 2</Text>
     <Button title="Go to Screen 1" onPress={() => navigation.navigate('Screen1')} />
     <Button title="Go to Screen 3" onPress={() => navigation.navigate('Screen3')} />
@@ -24,7 +24,7 @@ const ScreenTwo = ({ navigation }) => (
 );
 
 const ScreenThree = ({ navigation }) => (
-  <View style={styles.screen}>
+  <View style={styles.container}>
     <Text>Screen 3</Text>
     <Button title="Go to Screen 1" onPress={() => navigation.navigate('Screen1')} />
     <Button title="Go to Screen 2" onPress={() => navigation.navigate('Screen2')} />
@@ -33,7 +33,7 @@ const ScreenThree = ({ navigation }) => (
 );
 
 const ScreenFour = ({ navigation }) => (
-  <View style={styles.screen}>
+  <View style={styles.container}>
     <Text>Screen 4</Text>
     <Button title="Go to Screen 1" onPress={() => navigation.navigate('Screen1')} />
     <Button title="Go to Screen 2" onPress={() => navigation.navigate('Screen2')} />
@@ -55,10 +55,13 @@ const Task_42 = () => {
 };
 
 const styles = StyleSheet.create({
-  screen: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
   },
 });
 
